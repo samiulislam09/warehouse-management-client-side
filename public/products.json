@@ -3,28 +3,36 @@
         "_id":1,
         "name":"bikel belar pakhi",
         "desc":"ami holam sokal belar pakhi sobar age sokal sajhe uthbo ami sajhi",
+        "price":150,
         "img":"https://img.freepik.com/free-psd/beautiful-book-cover-mockup_23-2149152265.jpg?t=st=1651690407~exp=1651691007~hmac=97e8e399b083dbcbdbf244077ec30d0fd615a02c2a51ec2efd9be31c1e1d7d42&w=996"
     },
     {
         "_id":2,
         "name":"bikel belar pakhi",
         "desc":"ami holam sokal belar pakhi sobar age sokal sajhe uthbo ami sajhi",
+        "price":150,
+
         "img":"https://img.freepik.com/free-psd/beautiful-book-cover-mockup_23-2149152265.jpg?t=st=1651690407~exp=1651691007~hmac=97e8e399b083dbcbdbf244077ec30d0fd615a02c2a51ec2efd9be31c1e1d7d42&w=996"
     },
     {
         "_id":3,
-        "name":"bikel belar pakhi",
+        "name":"bikel belar pakhi",        
+        "price":150,
         "desc":"ami holam sokal belar pakhi sobar age sokal sajhe uthbo ami sajhi",
         "img":"https://img.freepik.com/free-psd/beautiful-book-cover-mockup_23-2149152265.jpg?t=st=1651690407~exp=1651691007~hmac=97e8e399b083dbcbdbf244077ec30d0fd615a02c2a51ec2efd9be31c1e1d7d42&w=996"
     },
     {
         "_id":4,
         "name":"bikel belar pakhi",
+        "price":150,
+
         "desc":"ami holam sokal belar pakhi sobar age sokal sajhe uthbo ami sajhi",
         "img":"https://img.freepik.com/free-psd/beautiful-book-cover-mockup_23-2149152265.jpg?t=st=1651690407~exp=1651691007~hmac=97e8e399b083dbcbdbf244077ec30d0fd615a02c2a51ec2efd9be31c1e1d7d42&w=996"
     },{
         "_id":5,
         "name":"bikel belar pakhi",
+        "price":150,
+
         "desc":"ami holam sokal belar pakhi sobar age sokal sajhe uthbo ami sajhi",
         "img":"https://img.freepik.com/free-psd/beautiful-book-cover-mockup_23-2149152265.jpg?t=st=1651690407~exp=1651691007~hmac=97e8e399b083dbcbdbf244077ec30d0fd615a02c2a51ec2efd9be31c1e1d7d42&w=996"
     }
