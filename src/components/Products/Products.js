@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Card, CardGroup, Col, Row } from 'react-bootstrap';
+import { CardGroup } from 'react-bootstrap';
 import Product from '../Product/Product'
 import './Products.css'
 

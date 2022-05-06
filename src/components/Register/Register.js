@@ -1,27 +1,27 @@
 import React from 'react'
 import { Button, Form } from 'react-bootstrap'
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom'
-import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
-import app from '../../firebase.init';
+import { toast } from 'react-toastify';
+import { auth } from '../../firebase.init';
+import GoogleLogin from '../SocialLogin/GoogleLogin';
 
 function Register() {
-  const auth = getAuth(app)
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
+  
   const registerWithPassowrd = event =>{
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
-    createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
-
+    createUserWithEmailAndPassword(email, password);
+    event.target.email.value = '';
+    event.target.password.value = '';
+    
   }
   return (
     <div className='w-50 ml-0 mr-0 mx-auto'>
@@ -44,9 +44,7 @@ function Register() {
       </Form>
       <div className='social-login'>
         
-      <button type="button" className="login-with-google-btn mx-auto my-3" >
-        Sign in with Google
-      </button>
+      <GoogleLogin></GoogleLogin>
       </div>
     </div>
   )

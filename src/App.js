@@ -5,6 +5,10 @@ import Home from './components/Home/Home/Home';
 import { Route, Routes } from 'react-router-dom';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import { ToastContainer } from 'react-bootstrap';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import ManageInventory from './components/ManageInventory/ManageInventory';
+import AddItem from './components/AddItem/AddItem';
 
 function App() {
   return (
@@ -14,6 +18,16 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/manageinventory' element={
+          <RequireAuth>
+            <ManageInventory></ManageInventory>
+          </RequireAuth>
+        }></Route>
+        <Route path='/additem' element={
+          <RequireAuth>
+            <AddItem></AddItem>
+          </RequireAuth>
+        }></Route>
       </Routes>
     </div>
   );

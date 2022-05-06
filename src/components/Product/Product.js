@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Card } from 'react-bootstrap'
 
 function Product(props) {
-  const {name, img, desc, price} = props.product;
+  const {name, img, desc, price, qty, supplier} = props.product;
   return (
     <div>
       <Card>
@@ -15,7 +15,13 @@ function Product(props) {
           <Card.Text>
             price: ${price}
           </Card.Text>
-          <Button variant="primary">book</Button>
+          <Card.Text>
+            Quantity: {qty}
+          </Card.Text>
+          <Card.Text>
+            Supplier: {supplier}
+          </Card.Text>
+          <Button variant="primary">Update</Button>
         </Card.Body>
     </Card>
     </div>

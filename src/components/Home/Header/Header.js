@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import app from '../../../firebase.init';
 import { getAuth, signOut } from "firebase/auth";
+import RequireAuth from '../../RequireAuth/RequireAuth';
 
 function Header() {
   const auth = getAuth(app);
@@ -25,7 +26,8 @@ function Header() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                     <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                    <Nav.Link>Pricing</Nav.Link>
+                    <Nav.Link as={Link} to='/manageinventory'>Manage Inventory</Nav.Link>
+                    <Nav.Link as={Link} to='/additem'>Add new item</Nav.Link>
                     </Nav>
                     <Nav>
                       {
