@@ -14,8 +14,8 @@ function RequireAuth({children}) {
     const [sendEmailVerification] = useSendEmailVerification(auth)
     
     const emailVerificationHandler = async()=>{
-      await sendEmailVerification();
       toast('Sent mail')
+      await sendEmailVerification();
     }
     if(loading){
       return <Loading></Loading>
