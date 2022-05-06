@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { auth } from '../../firebase.init';
 import Loading from '../Loading/Loading';
 import GoogleLogin from '../SocialLogin/GoogleLogin';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
 
 function Login() {
+  const [errormsg, setErrormsg] = useState('')
   const navigate = useNavigate()
   const location = useLocation()
   let from = location.state?.from?.pathname || '/'
@@ -17,9 +21,7 @@ function Login() {
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
-  if (error){
-    console.log('error');
-  }
+
   if(loading){
     return <Loading></Loading>
   }
@@ -35,6 +37,7 @@ function Login() {
   if(user){
     navigate(from)
   }
+  
   return (
     <div className='w-50 ml-0 mr-0 mx-auto'>
       <h1 className='text-center my-5'>Login</h1>
@@ -43,7 +46,7 @@ function Login() {
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" name='email' placeholder="Enter email" required />
           <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
+            {errormsg}
           </Form.Text>
         </Form.Group>
 
@@ -64,6 +67,7 @@ function Login() {
         
       <GoogleLogin></GoogleLogin>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   )
 }

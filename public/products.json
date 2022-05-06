@@ -1,46 +1,46 @@
 [
     {
         "_id":1,
-        "name":"bikel belar pakhi",
-        "desc":"ami holam sokal belar pakhi sobar age sokal sajhe uthbo ami sajhi",
-        "price":150,
-        "qty":1,
-        "supplier":"Jhankar mahbub",
-        "img":"https://img.freepik.com/free-psd/beautiful-book-cover-mockup_23-2149152265.jpg?t=st=1651690407~exp=1651691007~hmac=97e8e399b083dbcbdbf244077ec30d0fd615a02c2a51ec2efd9be31c1e1d7d42&w=996"
+        "name":"Pprogramming Contest",
+        "desc":"The book is about programming in c",
+        "price":350,
+        "qty":10,
+        "supplier":"Mahbubul Hasan",
+        "img":"https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Programming_Contest_Somossa_o_Somadhan-Md_Mahbubul_Hasan-52b29-224503.jpg"
     },
     {
         "_id":2,
-        "name":"bikel belar pakhi",
-        "desc":"ami holam sokal belar pakhi sobar age sokal sajhe uthbo ami sajhi",
+        "name":"My Evil Mother: A Short Story",
+        "desc":"A bittersweet short story about mothers, daughters, and the witches",
         "price":150,
-        "qty":1,
-        "supplier":"Jhankar mahbub",
-        "img":"https://img.freepik.com/free-psd/beautiful-book-cover-mockup_23-2149152265.jpg?t=st=1651690407~exp=1651691007~hmac=97e8e399b083dbcbdbf244077ec30d0fd615a02c2a51ec2efd9be31c1e1d7d42&w=996"
+        "qty":5,
+        "supplier":"Allena abraham",
+        "img":"https://m.media-amazon.com/images/I/41HBwv6A1ML._SY346_.jpg"
     },
     {
         "_id":3,
-        "name":"bikel belar pakhi",        
-        "price":150,
+        "name":"Things We Never Got Over",        
+        "price":100,
         "qty":1,
-        "supplier":"Jhankar mahbub",
+        "supplier":"Lucy Score",
         "desc":"ami holam sokal belar pakhi sobar age sokal sajhe uthbo ami sajhi",
-        "img":"https://img.freepik.com/free-psd/beautiful-book-cover-mockup_23-2149152265.jpg?t=st=1651690407~exp=1651691007~hmac=97e8e399b083dbcbdbf244077ec30d0fd615a02c2a51ec2efd9be31c1e1d7d42&w=996"
+        "img":"https://m.media-amazon.com/images/I/41qiZpKBDvL._SY346_.jpg"
     },
     {
         "_id":4,
-        "name":"bikel belar pakhi",
-        "price":150,
+        "name":"The Dark One",
+        "price":15,
         "qty":1,
-        "supplier":"Jhankar mahbub",
-        "desc":"ami holam sokal belar pakhi sobar age sokal sajhe uthbo ami sajhi",
-        "img":"https://img.freepik.com/free-psd/beautiful-book-cover-mockup_23-2149152265.jpg?t=st=1651690407~exp=1651691007~hmac=97e8e399b083dbcbdbf244077ec30d0fd615a02c2a51ec2efd9be31c1e1d7d42&w=996"
+        "supplier":"Nikki St. Crowe",
+        "desc":"I spent most of my life feeling dead inside — until I met Peter Pan and the Lost Boys.It wasn't until Pan and Neverland that I finally felt alive.",
+        "img":"https://m.media-amazon.com/images/I/51pABwAOl3L.jpg"
     },{
         "_id":5,
-        "name":"bikel belar pakhi",
-        "price":150,
+        "name":"Reminders of Him: A Novel",
+        "price":10,
         "qty":1,
-        "supplier":"Jhankar mahbub",
-        "desc":"ami holam sokal belar pakhi sobar age sokal sajhe uthbo ami sajhi",
-        "img":"https://img.freepik.com/free-psd/beautiful-book-cover-mockup_23-2149152265.jpg?t=st=1651690407~exp=1651691007~hmac=97e8e399b083dbcbdbf244077ec30d0fd615a02c2a51ec2efd9be31c1e1d7d42&w=996"
+        "supplier":"Colleen Hoover",
+        "desc":"A troubled young mother yearns for a shot at redemption in this heartbreaking yet hopeful story from #1 New York Times bestselling author Colleen Hoover.",
+        "img":"https://m.media-amazon.com/images/I/41EiBLxybSL.jpg"
     }
 ]

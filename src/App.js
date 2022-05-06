@@ -9,6 +9,7 @@ import { ToastContainer } from 'react-bootstrap';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import AddItem from './components/AddItem/AddItem';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/product/:id' element={<ProductDetails></ProductDetails>}></Route>
         <Route path='/manageinventory' element={
           <RequireAuth>
             <ManageInventory></ManageInventory>
