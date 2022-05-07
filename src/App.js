@@ -13,6 +13,7 @@ import ProductDetails from './components/ProductDetails/ProductDetails';
 import UpdateItem from './components/UpdateItem/UpdateItem';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
+import Blog from './components/Blog/Blog';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/product/:id' element={
           <RequireAuth>
             <ProductDetails></ProductDetails>

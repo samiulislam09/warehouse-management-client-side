@@ -21,13 +21,14 @@ function Header() {
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand as={Link} to='/'>React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand as={Link} to='/'>Book Manager</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                     <Nav.Link as={Link} to='/'>Home</Nav.Link>
                     <Nav.Link as={Link} to='/manageinventory'>Manage Inventory</Nav.Link>
                     <Nav.Link as={Link} to='/additem'>Add new item</Nav.Link>
+                    <Nav.Link as={Link} to='/blog'>Blogs</Nav.Link>
                     </Nav>
                     <Nav>
                       {

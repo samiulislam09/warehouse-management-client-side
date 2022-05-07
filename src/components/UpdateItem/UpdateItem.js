@@ -15,7 +15,7 @@ function UpdateItem() {
         const img = event.target.img.value;
         const data = {name, desc, price, qty, supplier, img}
         toast('item added')
-        const url = `http://localhost:5000/update/${id}`;
+        const url = `https://obscure-mesa-50963.herokuapp.com/update/${id}`;
         fetch(url, {
           method:"PUT",
           headers:{

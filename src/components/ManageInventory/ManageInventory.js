@@ -9,7 +9,7 @@ function ManageInventory() {
   const navigate = useNavigate()
 
   useEffect(()=>{
-    fetch('http://localhost:5000/product')
+    fetch('https://obscure-mesa-50963.herokuapp.com/product')
     .then(res=>res.json())
     .then(data => setProducts(data))
   }, [])
@@ -17,7 +17,7 @@ function ManageInventory() {
     const proceed = window.confirm("Do you want to delete")
     if (proceed){
       console.log('deleting', id)
-      const url = `http://localhost:5000/manageinventory/${id}`
+      const url = `https://obscure-mesa-50963.herokuapp.com/manageinventory/${id}`
       fetch(url, {
         method:'DELETE'
       })
@@ -36,7 +36,7 @@ function ManageInventory() {
 
   return (
     <div>
-      <h1 className='text-center'>Manage Inventory</h1>
+      <h1 className='text-center my-5'>Manage Inventory</h1>
       <Table responsive="sm">
     <thead>
       <tr>

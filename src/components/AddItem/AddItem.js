@@ -13,7 +13,7 @@ function AddItem() {
     const img = event.target.img.value;
     const data = {name, desc, price, qty, supplier, img}
     toast('item added')
-    const url = `http://localhost:5000/product`;
+    const url = `https://obscure-mesa-50963.herokuapp.com/product`;
     fetch(url, {
       method:"POST",
       headers:{

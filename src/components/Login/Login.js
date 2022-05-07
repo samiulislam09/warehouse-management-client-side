@@ -11,7 +11,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
 
 function Login() {
-  const [errormsg, setErrormsg] = useState('')
   const navigate = useNavigate()
   const location = useLocation()
   let from = location.state?.from?.pathname || '/'
@@ -45,9 +44,7 @@ function Login() {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" name='email' placeholder="Enter email" required />
-          <Form.Text className="text-muted">
-            {errormsg}
-          </Form.Text>
+
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">

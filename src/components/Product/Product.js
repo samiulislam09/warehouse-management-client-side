@@ -10,8 +10,8 @@ function Product(props) {
   }
   return (
     <div>
-      <Card className="w-75">
-        <Card.Img style={{height:'500px'}} variant="top" src={img} />
+      <Card className="w-100">
+        <Card.Img style={{height:'600px'}} variant="top" src={img} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>
