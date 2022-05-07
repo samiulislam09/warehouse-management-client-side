@@ -12,6 +12,7 @@ import AddItem from './components/AddItem/AddItem';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import UpdateItem from './components/UpdateItem/UpdateItem';
 import Footer from './components/Footer/Footer';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <AddItem></AddItem>
           </RequireAuth>
         }></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
