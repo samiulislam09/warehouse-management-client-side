@@ -11,6 +11,7 @@ import ManageInventory from './components/ManageInventory/ManageInventory';
 import AddItem from './components/AddItem/AddItem';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import UpdateItem from './components/UpdateItem/UpdateItem';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           </RequireAuth>
         }></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
