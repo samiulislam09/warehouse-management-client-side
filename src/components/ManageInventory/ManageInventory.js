@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 function ManageInventory() {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate()
+
   useEffect(()=>{
     fetch('http://localhost:5000/product')
     .then(res=>res.json())
@@ -23,9 +24,16 @@ function ManageInventory() {
       .then(res=>res.json())
       .then(data=>{
         console.log(data)
+        const remaining = products.filter(product=>product._id !== id);
+        setProducts(remaining)
       })
     }
   }
+
+  const handleUpdateItem = id =>{
+    navigate(`/update/${id}`)
+  }
+
   return (
     <div>
       <h1 className='text-center'>Manage Inventory</h1>
@@ -45,7 +53,7 @@ function ManageInventory() {
           <td>{product.name}</td>
           <td>{product.qty}</td>
           <td>{product.supplier}</td>
-          <td><button className='btn btn-primary'><FontAwesomeIcon icon={faPen}></FontAwesomeIcon></button></td>
+          <td><button onClick={()=>handleUpdateItem(product._id)} className='btn btn-primary'><FontAwesomeIcon icon={faPen}></FontAwesomeIcon></button></td>
           <td><button onClick={()=> handleDeleteItem(product._id)} className='btn btn-primary'><FontAwesomeIcon icon={faTrash}></FontAwesomeIcon></button></td>
         </tr>)
       }
