@@ -1,0 +1,35 @@
+.contact-us-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: start;
+    gap: 20;
+    padding: 50px;
+    background-color: #F4F4F4;
+}
+.contact-us-container .icon{
+    height: 30px;
+    width: 30px;
+    padding: 15px;
+    border: 1px solid rgba(138, 136, 136, 0.682);
+    border-radius: 50%;
+    color: #3C6382;
+}
+.contact-us-container p{
+    color: #3C6382;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: .2px;
+}
+.contact-us-container .heading{
+    color: #3C6382;
+    font-size: 16px;
+}
+
+@media all and (max-width: 768px){
+    .contact-us-container{
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+}
