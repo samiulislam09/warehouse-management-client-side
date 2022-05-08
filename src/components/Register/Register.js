@@ -2,15 +2,13 @@ import React from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom'
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import { auth } from '../../firebase.init';
 import GoogleLogin from '../SocialLogin/GoogleLogin';
 
 function Register() {
   const [
     createUserWithEmailAndPassword,
-    user,
-    loading,
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
   
@@ -21,8 +19,11 @@ function Register() {
     createUserWithEmailAndPassword(email, password);
     event.target.email.value = '';
     event.target.password.value = '';
+    toast('Created user')
     
   }
+
+
   return (
     <div className='w-50 ml-0 mr-0 mx-auto'>
       <h1 className='text-center my-5'>Register</h1>
@@ -35,6 +36,9 @@ function Register() {
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" name='password' placeholder="Password" />
         </Form.Group>
+        {
+          error?<p className='text-danger'>Something error happend</p>:""
+        }
         <Form.Group className="mb-3">
           Already have an account <Link className='register-now-btn' to='/login'>Login</Link>
         </Form.Group>
@@ -45,6 +49,7 @@ function Register() {
       <div className='social-login'>
         
       <GoogleLogin></GoogleLogin>
+      <ToastContainer></ToastContainer>
       </div>
     </div>
   )

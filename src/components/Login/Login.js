@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { auth } from '../../firebase.init';
-import Loading from '../Loading/Loading';
 import GoogleLogin from '../SocialLogin/GoogleLogin';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
@@ -17,7 +15,6 @@ function Login() {
   const [
     signInWithEmailAndPassword,
     user,
-    loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
 
