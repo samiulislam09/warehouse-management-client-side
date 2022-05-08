@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import app from '../../../firebase.init';
 import { getAuth, signOut } from "firebase/auth";
-import RequireAuth from '../../RequireAuth/RequireAuth';
 
 function Header() {
   const auth = getAuth(app);

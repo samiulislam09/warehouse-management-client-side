@@ -14,6 +14,7 @@ import UpdateItem from './components/UpdateItem/UpdateItem';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
 import Blog from './components/Blog/Blog';
+import MyItem from './components/MyItem/MyItem';
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/myitem' element={
+          <RequireAuth>
+            <MyItem></MyItem>
+          </RequireAuth>
+        }></Route>
         <Route path='/product/:id' element={
           <RequireAuth>
             <ProductDetails></ProductDetails>
