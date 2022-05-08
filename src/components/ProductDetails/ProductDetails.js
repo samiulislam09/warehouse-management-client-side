@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom'
 function ProductDetails() {
     const {id} = useParams()
     const [product, setProduct] = useState({});
-    const [productQty, setProductQty] = useState('')
     useEffect(()=>{
         fetch(`https://obscure-mesa-50963.herokuapp.com/product/${id}`)
         .then(res=>res.json())
@@ -14,7 +13,7 @@ function ProductDetails() {
     console.log(product)
 
     const deliverItem = () =>{
-      
+      setProduct(product => ({...product,qty: product.qty - 1}))
     }
 
   return (
@@ -31,7 +30,7 @@ function ProductDetails() {
             price: ${product.price}
           </Card.Text>
           <Card.Text>
-            Quantity: {product.qty}
+            Quantity: {product.qty>0?product.qty:'stock out'}
           </Card.Text>
           <Card.Text>
             Supplier: {product.supplier}
