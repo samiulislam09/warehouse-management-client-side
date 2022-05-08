@@ -26,6 +26,7 @@ function Header() {
                     <Nav className="me-auto">
                     <Nav.Link as={Link} to='/'>Home</Nav.Link>
                     <Nav.Link as={Link} to='/manageinventory'>Manage Inventory</Nav.Link>
+                    <Nav.Link as={Link} to='/myitem'>My Items</Nav.Link>
                     <Nav.Link as={Link} to='/additem'>Add new item</Nav.Link>
                     <Nav.Link as={Link} to='/blog'>Blogs</Nav.Link>
                     </Nav>

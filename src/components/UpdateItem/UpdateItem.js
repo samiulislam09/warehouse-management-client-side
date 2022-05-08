@@ -1,9 +1,12 @@
 import React from 'react'
 import { Button, Form } from 'react-bootstrap'
+import { useAuthState } from 'react-firebase-hooks/auth'
 import { useParams } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
+import { auth } from '../../firebase.init'
 
 function UpdateItem() {
+  const [user] = useAuthState(auth)
     const {id} = useParams();
     const updateItemHandler = (event)=>{
         event.preventDefault();
@@ -13,7 +16,8 @@ function UpdateItem() {
         const qty = event.target.qty.value;
         const supplier = event.target.supplier.value;
         const img = event.target.img.value;
-        const data = {name, desc, price, qty, supplier, img}
+        const email = user.email;
+        const data = {email, name, desc, price, qty, supplier, img}
         toast('item added')
         const url = `https://obscure-mesa-50963.herokuapp.com/update/${id}`;
         fetch(url, {
@@ -62,7 +66,7 @@ function UpdateItem() {
           <Form.Control name='img' type="text" placeholder="Enter image link" required />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button className='my-3' variant="primary" type="submit">
           Update Item
         </Button>
     </Form>

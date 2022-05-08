@@ -1,4 +1,4 @@
-import { faPen, faPenAlt, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react'
 import { Table } from 'react-bootstrap';
@@ -49,7 +49,7 @@ function ManageInventory() {
     </thead>
     <tbody>
       {
-        products.map(product=> <tr>
+        products.map(product=> <tr key={product._id}>
           <td>{product.name}</td>
           <td>{product.qty}</td>
           <td>{product.supplier}</td>

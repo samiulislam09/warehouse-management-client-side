@@ -5,7 +5,6 @@ import Home from './components/Home/Home/Home';
 import { Route, Routes } from 'react-router-dom';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
-import { ToastContainer } from 'react-bootstrap';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import AddItem from './components/AddItem/AddItem';
@@ -26,6 +25,11 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/myitem' element={
+          <RequireAuth>
+            <MyItem></MyItem>
+          </RequireAuth>
+        }></Route>
+        <Route path='/myitem/:id' element={
           <RequireAuth>
             <MyItem></MyItem>
           </RequireAuth>
